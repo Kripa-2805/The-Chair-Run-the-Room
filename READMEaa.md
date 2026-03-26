@@ -117,22 +117,5 @@ the-chair/
 > Topic: React State Management, Deployment, and MUN Rules of Procedure
 
 ---
-
-## 👤 Author
-
-**Your Name**
-- GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
-- Email: your@email.com
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-<p align="center">
-  🪑 <strong>The Chair — Work Made Easier</strong><br/>
-  <em>Command the Committee.</em>
+tee.</em>
 </p>
