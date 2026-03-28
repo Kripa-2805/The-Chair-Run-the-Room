@@ -725,10 +725,104 @@ body::after {
   animation: blink 1.5s infinite;
 }
 
-/* ── RESPONSIVE ── */
-@media (max-width: 700px) {
-  .timer-digits { font-size: 36px; }
+/* ══════════════════════════════════════
+   RESPONSIVE — TABLET & MOBILE
+   ══════════════════════════════════════ */
+
+/* ── Tablet (≤1000px) ── */
+@media (max-width: 1000px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .timer-card  { grid-column: 1; grid-row: 2; }
+  .gsl-card    { grid-column: 1; grid-row: 1; }
+  .log-card    { grid-column: 1; grid-row: 3; }
+}
+
+/* ── Mobile (≤600px) ── */
+@media (max-width: 600px) {
+
+  /* Layout */
+  .app-wrapper { padding: 0 12px 40px; }
+
+  /* Header */
+  .un-header { padding: 24px 12px 20px; }
+  .un-emblem { width: 56px; height: 56px; margin-bottom: 10px; }
+  .header-eyebrow { font-size: 8px; letter-spacing: 3px; }
+  .header-title { font-size: 18px; letter-spacing: 1.5px; }
+  .header-subtitle { font-size: 11px; letter-spacing: 1px; }
+
+  /* Status bar */
+  .status-bar {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    font-size: 9px;
+    padding: 8px 16px;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  /* Cards */
+  .card-header { padding: 14px 16px 12px; gap: 10px; }
+  .card-body   { padding: 14px 16px; }
+  .card-icon   { width: 30px; height: 30px; font-size: 14px; }
+  .card-title  { font-size: 10px; letter-spacing: 2px; }
+
+  /* GSL Add form */
+  .gsl-add-form { flex-direction: column; gap: 8px; }
+  .gsl-input { font-size: 14px; padding: 12px 14px; }
+  .btn-add { width: 100%; padding: 12px; font-size: 11px; }
+
+  /* Current speaker */
+  .current-speaker { padding: 14px; }
+  .current-speaker-name { font-size: 20px; }
+  .speaker-flag { font-size: 24px; margin-right: 8px; }
+  .current-speaker-meta { font-size: 9px; }
+
+  /* Queue items */
+  .queue-item { padding: 10px 12px; gap: 8px; }
+  .queue-country { font-size: 14px; }
+  .queue-actions {
+    opacity: 1 !important; /* Always show on mobile — no hover */
+    flex-direction: column;
+    gap: 4px;
+  }
+  .q-btn { font-size: 8px; padding: 4px 6px; }
+
+  /* Timer */
   .timer-ring-container { width: 160px; height: 160px; }
-  .card-body { padding: 16px; }
-  .gsl-add-form { flex-direction: column; }
+  .timer-digits { font-size: 38px; }
+  .timer-state-label { font-size: 8px; }
+
+  .timer-presets { gap: 6px; flex-wrap: wrap; }
+  .preset-btn { font-size: 10px; padding: 6px 12px; }
+
+  .timer-controls { gap: 8px; }
+  .btn { font-size: 9px; letter-spacing: 2px; padding: 11px 6px; }
+
+  /* Yield panel */
+  .yield-panel { padding: 12px; }
+  .yield-title { font-size: 8px; }
+  .yield-input { font-size: 13px; padding: 8px 10px; }
+
+  /* Log */
+  .log-item { font-size: 9px; gap: 6px; }
+  .log-list { max-height: 180px; }
+
+  /* Footer */
+  .un-footer { font-size: 7px; letter-spacing: 2px; padding: 16px; }
+
+  /* Toast */
+  .toast {
+    font-size: 9px;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    width: 90%;
+    text-align: center;
+    white-space: normal;
+  }
+
+  /* Globe watermark — smaller on mobile */
+  body::after { width: 320px; height: 320px; }
 }
